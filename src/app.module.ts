@@ -13,6 +13,7 @@ import { BooksModule } from './books/books.module';
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
+      ssl: { rejectUnauthorized: false },
     }),
     BooksModule,
   ],
